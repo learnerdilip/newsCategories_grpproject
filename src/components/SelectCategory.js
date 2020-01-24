@@ -23,18 +23,40 @@ export default class SelectCategory extends Component {
   render() {
     return (
       <div>
-        <p className="homenews">
-          {this.state.news.map(newsarticle => {
-            return <p> {newsarticle.title} </p>;
+        <div className="categories">
+          <Link to={"/entertainment"}>Entertainment</Link>
+          <Link to={"/sports"}>Sports</Link>
+          <Link to={"/business"}>Business</Link>
+          <Link to={"/health"}>Health</Link>
+          <Link to={"/science"}>Science</Link>
+          <Link to={"/technology"}>Technology</Link>
+          <Link to={"/general"}>General</Link>
+        </div>
+        <div className="homenews">
+          {this.state.news.map((newsarticle, index) => {
+            return (
+              <div key={index} className="newscard">
+                <img alt={newsarticle.title} src={newsarticle.urlToImage} />
+                <div className="newscarddetail">
+                  <h3> {newsarticle.title} </h3>
+                  <p> {newsarticle.description}</p>
+                  <button>
+                    <a href={newsarticle.url}>source</a>
+                  </button>
+                </div>
+              </div>
+            );
           })}
-        </p>
-        <Link to={"/entertainment"}>Entertainment</Link>
-        <Link to={"/sports"}>Sports</Link>
-        <Link to={"/business"}>Business</Link>
-        <Link to={"/health"}>Health</Link>
-        <Link to={"/science"}>Science</Link>
-        <Link to={"/technology"}>Technology</Link>
-        <Link to={"/general"}>General</Link>
+        </div>
+        <div className="categories">
+          <Link to={"/entertainment"}>Entertainment</Link>
+          <Link to={"/sports"}>Sports</Link>
+          <Link to={"/business"}>Business</Link>
+          <Link to={"/health"}>Health</Link>
+          <Link to={"/science"}>Science</Link>
+          <Link to={"/technology"}>Technology</Link>
+          <Link to={"/general"}>General</Link>
+        </div>
       </div>
     );
   }

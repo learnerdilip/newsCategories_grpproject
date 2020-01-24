@@ -27,12 +27,28 @@ export default class NewsPage extends Component {
     console.log("LATEST STATE", this.state.news);
     return (
       <div>
-        <ul>
-          {this.state.news.map(newsarticle => {
-            return <li> {newsarticle.title} </li>;
+        <div className="categories">
+          <Link to={"./"}>Go to Home Page</Link>
+        </div>
+        <div>
+          {this.state.news.map((newsarticle, index) => {
+            return (
+              <div key={index} className="newscard">
+                <img alt={newsarticle.title} src={newsarticle.urlToImage} />
+                <div className="newscarddetail">
+                  <h3> {newsarticle.title} </h3>
+                  <p> {newsarticle.description}</p>
+                  <button>
+                    <a href={newsarticle.url}>source</a>
+                  </button>
+                </div>
+              </div>
+            );
           })}
-        </ul>
-        <Link to={"./"}>Go to Home Page</Link>
+        </div>
+        <div className="categories">
+          <Link to={"./"}>Go to Home Page</Link>
+        </div>
       </div>
     );
   }
