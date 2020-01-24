@@ -23,17 +23,18 @@ export default class SelectCategory extends Component {
   render() {
     return (
       <div>
-        <h2>
+        <p className="homenews">
           {this.state.news.map(newsarticle => {
-            return <li> {newsarticle.title} </li>;
+            return <p> {newsarticle.title} </p>;
           })}
-        </h2>
-        <Link to={"/Entertainment"}>entertainment</Link>
-        <Link to={"/Sports"}>Sports</Link>
-        <Link to={"/Business"}>Business</Link>
-        <Link to={"/Social"}>Social</Link>
-        <Link to={"/Space"}>Space</Link>
-        <Link to={"/Etc"}>Etc</Link>
+        </p>
+        <Link to={"/entertainment"}>Entertainment</Link>
+        <Link to={"/sports"}>Sports</Link>
+        <Link to={"/business"}>Business</Link>
+        <Link to={"/health"}>Health</Link>
+        <Link to={"/science"}>Science</Link>
+        <Link to={"/technology"}>Technology</Link>
+        <Link to={"/general"}>General</Link>
       </div>
     );
   }
