@@ -9,8 +9,6 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={SelectCategory} />
-        {/* <SelectCategory /> */}
-        {/* <NewsPage /> */}
         <Route exact path="/:category" component={NewsPage} />
       </div>
     );
