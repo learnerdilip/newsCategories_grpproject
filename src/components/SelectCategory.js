@@ -7,7 +7,7 @@ export default class SelectCategory extends Component {
   };
 
   componentDidMount() {
-    const api_key = "41f62212190b4ef68512cf121cfc796b";
+    const api_key = "6bd1b0ea767f47919421ad8e3f978060";
     fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${api_key}`)
       .then(response => response.json())
       .then(news => {

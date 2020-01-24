@@ -6,7 +6,7 @@ export default class NewsPage extends Component {
     news: []
   };
   componentDidMount() {
-    const api_key = "41f62212190b4ef68512cf121cfc796b";
+    const api_key = "6bd1b0ea767f47919421ad8e3f978060";
     console.log(this.props, "HEREERER");
     const selectedcategory = this.props.match.params.category;
     fetch(
